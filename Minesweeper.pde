@@ -130,6 +130,9 @@ public class MSButton
     // called by manager
     public void mousePressed () 
     {
+      if(clicked == true){
+        return;
+      }
        clicked = true;  
       //your code here
         if(flagged == true){
@@ -149,7 +152,7 @@ public class MSButton
           displayLosingMessage();
         }
         else if(countMines(myRow, myCol) > 0){
-          myLabel = Integer.toString(countMines(myRow, myCol));
+          myLabel = "" + countMines(myRow, myCol);
         }
         else{
           //top
