@@ -63,7 +63,6 @@ public void displayLosingMessage()
 {
     for(int i = 0; i < mines.size(); i++){
       if(mines.get(i).clicked == true){
-        System.out.println("lose");
         message = "Lose :(";
          for(int r = 0; r < NUM_ROWS; r++){
           for(int c = 0; c < NUM_COLS; c++){
@@ -78,7 +77,6 @@ public void displayLosingMessage()
 public void displayWinningMessage()
 {
     if(isWon() == true){
-      System.out.println("win");
       message = "Win :)";
     }
 }
