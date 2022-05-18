@@ -66,8 +66,10 @@ public void displayLosingMessage()
         message = "Lose :(";
          for(int r = 0; r < NUM_ROWS; r++){
           for(int c = 0; c < NUM_COLS; c++){
-            if(!buttons[r][c].clicked){
-             buttons[r][c].mousePressed();
+           if(buttons[r][c].flagged == true){
+            buttons[r][c].flagged = false; 
+           }
+           buttons[r][c].mousePressed();
             }
           }
         }
